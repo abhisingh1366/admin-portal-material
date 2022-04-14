@@ -20,6 +20,7 @@ import { DeleteUserComponent } from './delete-user/delete-user.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AuthGuard } from './services/auth-guard.service';
 import { AuthService } from './services/auth.service';
+import { HeaderComponent } from './header/header.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { AuthService } from './services/auth.service';
     ResetPasswordComponent,
     EditUserComponent,
     DeleteUserComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
