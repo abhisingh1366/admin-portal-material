@@ -1,0 +1,67 @@
+/*Removing background color of autofill input fields*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/*---------------------------------------------------------------------*/
+/*Changes the Color of Required Astrik*/
+::ng-deep .mat-form-field-required-marker {
+  color: aliceblue
+}
+
+/*--------------------------------------------------------------------------*/
+.mat-dialog-content {
+  display: block;
+  margin: 0 -24px;
+  padding: 0 24px;
+  max-height: 65vh;
+  /* overflow: auto; */
+  -webkit-overflow-scrolling: touch;
+}
+
+form.formGroup.ng-pristine.ng-valid.ng-touched {
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.mat-form-field {
+  display: inline-block;
+  position: relative;
+  width: 300px;
+  text-align: initial;
+}
+
+.mat-dialog-actions {
+  padding: 8px 0;
+  display: flex;
+  min-height: 52px;
+  align-items: center;
+  box-sizing: content-box;
+  /* margin-bottom: -24px; */
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.save {
+  color: green;
+  font-size: 28px;
+  position: absolute;
+  top: -12px;
+  right: 12px;
+}
+
+@media only screen and (max-width: 600px) {
+  .mat-form-field {
+    width: 100%;
+    font-size: 12px;
+  }
+
+  .save {
+    top: -12px;
+  }
+}

@@ -1,0 +1,80 @@
+.table-div {
+  overflow-x: auto;
+  width: auto;
+  // margin-top: 20px;
+  font-size: 12px;
+}
+.mat-table {
+  // background: #fff; 
+  background: none;
+}
+
+.mat-form-field {
+  width: 100%;
+}
+
+.mat-icon {
+  margin-top: 5px;
+  height: 8px;
+  width: 18px;
+  font-size: 16px;
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+}
+
+.mat-icon:hover {
+  font-size: 18px;
+}
+
+th.mat-header-cell {
+  font-weight: bold;
+}
+
+th.mat-header-cell,
+td.mat-cell,
+td.mat-footer-cell {
+  padding: 10px;
+  color: #000;
+  font-size: 12px;
+}
+
+.actions-btn {
+  display: flex;
+}
+
+.back {
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.paginator {
+  float: right;
+}
+
+.mat-paginator {
+  
+  background: #fff0;
+}
+
+img, svg {
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+}
+
+@media only screen and (max-width: 1200px) {
+
+  .table-div {
+    overflow-x: auto;
+    width: auto;
+  }
+
+  .paginator {
+    float: none;
+  }
+
+  .mat-elevation-z8 {
+    box-shadow: none;
+  }
+}

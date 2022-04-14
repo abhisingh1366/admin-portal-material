@@ -1,0 +1,46 @@
+<div class="editDialog">
+  <div class="container">
+    <div class="mat-header">
+      <div mat-dialog-actions>
+        <button mat-icon-button mat-dialog-close matTooltip="Cancel">
+          <mat-icon style="color: grey;font-size: 20px">close</mat-icon>
+        </button>
+      </div>
+    </div>
+    <hr>
+    <div mat-dialog-content>
+      <div mat-dialog-title>Edit Form</div>
+      <form class="formGroup" [formGroup]="editForm">
+        <mat-form-field appearance="fill">
+          <mat-label for="username">Username: </mat-label>
+          <input matInput type="text" name="username" id="username" placeholder="UserName" formControlName="username"
+            required><br>
+        </mat-form-field><br>
+        <mat-form-field appearance="fill">
+          <mat-label for="email">Email: </mat-label>
+          <input matInput type="email" name="email" id="email" placeholder="Enter your valid Email id"
+            formControlName="email" required required="email"><br>
+        </mat-form-field><br>
+        <mat-form-field appearance="fill">
+          <mat-label for="name">First Name: </mat-label>
+          <input matInput type="text" name="first_name" id="fname" placeholder="Enter First Name"
+            formControlName="first_name" required><br>
+        </mat-form-field><br>
+        <mat-form-field appearance="fill">
+          <mat-label for="name">Last Name: </mat-label>
+          <input matInput type="text" name="last_name" id="lname" placeholder="Enter Last Name"
+            formControlName="last_name" required>
+        </mat-form-field>
+      </form>
+    </div>
+    <hr>
+    <div class="mat-footer">
+      <div mat-dialog-actions>
+        <button mat-dialog-close mat-raised-button matTooltip="Cancel">Cancel</button>
+        <button mat-button type="submit" (click)="onEdit()" [mat-dialog-close]="true" mat-raised-button matTooltip="Click to save">
+          <mat-icon class="save">save</mat-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

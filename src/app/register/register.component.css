@@ -1,0 +1,100 @@
+/*Removing background color of autofill input fields*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/*---------------------------------------------------------------------*/
+/*Changes the Color of Required Astrik*/
+::ng-deep .mat-form-field-required-marker {
+  color: aliceblue
+}
+/*--------------------------------------------------------------------------*/
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+/* .example-container .mat-form-field + .mat-form-field {
+    margin-left: 8px;
+  } */
+.input {
+  width: 300px;
+  display: inline-block;
+  margin-bottom: 4px;
+  margin-left: 8px;
+}
+
+.mat-card {
+  /* transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1); */
+  display: block;
+  position: relative;
+  background: linear-gradient(#3f51b500, #35b7ce00);
+  /* background-color: #0a74ab17; */
+  padding: 16px;
+  border-radius: 4px;
+}
+
+.mat-card>:first-child,
+.mat-card-content>:first-child {
+  margin-top: 0;
+  color: white;
+  /* color: darkcyan; */
+  font-size: x-large;
+  text-align: center;
+}
+
+.mat-form-field {
+  width: 500px;
+  margin-left: 6%;
+}
+
+mat-label {
+  font-size: 10px;
+  margin: 0;
+  color: aliceblue;
+}
+
+.cdk-text-field-autofill-monitored:not(:-webkit-autofill) {
+  animation: cdk-text-field-autofill-end 0s 1ms;
+  color: aliceblue;
+}
+
+select option {
+  background-color: #8dcdfe;
+  padding: 10px 10px;
+}
+
+.mat-datepicker-toggle,
+.mat-datepicker-content .mat-calendar-next-button,
+.mat-datepicker-content .mat-calendar-previous-button {
+  color: aliceblue;
+}
+
+.mat-icon-button .mat-icon {
+  margin: auto;
+  color: aliceblue;
+}
+
+@media only screen and (max-width: 1200px) {
+  .input {
+    width: 430px;
+  }
+
+}
+
+@media only screen and (max-width: 650px) {
+  .input {
+    width: 100%;
+    margin-bottom: 10px;
+    margin-left: 0;
+  }
+}

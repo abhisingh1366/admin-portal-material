@@ -1,0 +1,26 @@
+.mat-dialog-content {
+  display: block;
+  margin: 0 -24px;
+  padding: 0 24px;
+  max-height: 65vh;
+  /* overflow: auto; */
+  -webkit-overflow-scrolling: touch;
+}
+
+.mat-form-field {
+  display: inline-block;
+  position: relative;
+  width: 300px;
+  text-align: initial;
+}
+
+.mat-dialog-actions {
+  padding: 8px 0;
+  display: flex;
+  min-height: 52px;
+  align-items: center;
+  box-sizing: content-box;
+  /* margin-bottom: -24px; */
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}

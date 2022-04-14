@@ -1,0 +1,95 @@
+/*Removing background color of autofill input fields*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/*---------------------------------------------------------------------*/
+/*Changes the Color of Required Astrik*/
+::ng-deep .mat-form-field-required-marker {
+  color: aliceblue
+}
+
+/*--------------------------------------------------------------------------*/
+.example-container .mat-form-field+.mat-form-field {
+  margin-left: 8px;
+  width: 400px;
+}
+
+.example-right-align {
+  text-align: right;
+}
+
+input.example-right-align::-webkit-outer-spin-button,
+input.example-right-align::-webkit-inner-spin-button {
+  display: none;
+}
+
+input.example-right-align {
+  -moz-appearance: textfield;
+}
+
+.input {
+  width: 100%;
+}
+
+.mat-form-field {
+  display: inline-block;
+  position: relative;
+  text-align: left;
+  width: 50%;
+  color: #fff;
+}
+
+.mat-form-field-appearance-fill .mat-form-field-flex {
+  border-radius: 10px 10px 10px 10px;
+  padding: 1.75em 1.75em 0 1.75em;
+}
+
+.mat-card {
+  // margin-top: 20px;
+  background: linear-gradient(#3f51b500, #35b7ce00);
+}
+
+.mat-card-title.mat-card-title {
+  padding: 60px;
+  color: #fff;
+  font-family: serif;
+  font-size: xxx-large;
+  text-align: center;
+}
+
+span {
+  color: red;
+}
+
+a.link {
+  // color: #15126d;
+  color: #fff;
+  text-decoration: none;
+  padding: 5px;
+}
+
+a.link:hover {
+  color: #fff;
+  font-size: 16px;
+}
+
+.cdk-text-field-autofill-monitored:not(:-webkit-autofill) {
+  animation: cdk-text-field-autofill-end 0s 1ms;
+  color: aliceblue;
+}
+.img{
+  width: 100px;
+}
+/*---------------Media Query-------------------*/
+@media screen and (max-width: 650px) {
+  .mat-form-field {
+    width: 100%;
+  }
+  .img{
+    width: 146px;
+  }
+}
