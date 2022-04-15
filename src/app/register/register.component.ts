@@ -23,6 +23,7 @@ export class RegisterComponent implements OnInit {
 
   thirdFormGroup!: FormGroup;
   sponsor_id = new FormControl('ZS2Oez0');
+  
   isLinear = true;
 
 

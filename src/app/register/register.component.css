@@ -11,6 +11,7 @@ input:-webkit-autofill:active {
 ::ng-deep .mat-form-field-required-marker {
   color: aliceblue
 }
+
 /*--------------------------------------------------------------------------*/
 
 .example-form {
@@ -89,13 +90,18 @@ select option {
   margin-top: 8px;
   background-color: #fff0;
 }
-.mat-button, .mat-icon-button, .mat-stroked-button {
+
+.mat-button,
+.mat-icon-button,
+.mat-stroked-button {
   color: #fff;
   background: transparent;
 }
+
 .mat-form-field {
   margin-top: 16px;
 }
+
 
 @media only screen and (max-width: 1200px) {
   .input {
@@ -110,11 +116,12 @@ select option {
     margin-bottom: 10px;
     margin-left: 0;
   }
-  .mat-card[_ngcontent-gmw-c239] > [_ngcontent-gmw-c239]:first-child {
+
+  .mat-card[_ngcontent-gmw-c239]>[_ngcontent-gmw-c239]:first-child {
     margin-top: 0;
     color: white;
     padding: 20px;
     font-size: xx-large;
     text-align: center;
-}
+  }
 }
