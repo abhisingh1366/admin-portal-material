@@ -85,6 +85,18 @@ select option {
   color: aliceblue;
 }
 
+.mat-stepper-vertical {
+  margin-top: 8px;
+  background-color: #fff0;
+}
+.mat-button, .mat-icon-button, .mat-stroked-button {
+  color: #fff;
+  background: transparent;
+}
+.mat-form-field {
+  margin-top: 16px;
+}
+
 @media only screen and (max-width: 1200px) {
   .input {
     width: 430px;

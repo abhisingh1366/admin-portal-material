@@ -1,9 +1,86 @@
 <div class="regForm">
   <mat-card class="card">
     <div class="mat-subheading-1">Register Form</div>
-    <div class="example-container">
-      <form [formGroup]="registerForm" autocomplete="off">
+    <!---------------------------------------Stepper Form---------------------------------------->
+    <button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear" style="display: none;">
+      {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
+    </button>
+    <form [formGroup]="registerForm" class="content-container" (ngSubmit)="submit()">
+      <mat-vertical-stepper #stepper>
+        <mat-step formGroupName="firstFormGroup" [stepControl]="firstFormGroup">
+          <ng-template matStepLabel>Name Field</ng-template>
+          <mat-form-field appearance="fill" class="input">
+            <mat-label>Enter your Firstname: </mat-label>
+            <input matInput placeholder="admin" formControlName="first_name" required>
+            <mat-error *ngIf="first_name.invalid">{{getErrorMessage()}}</mat-error>
+          </mat-form-field><br>
+  
+          <mat-form-field appearance="fill" class="input">
+            <mat-label>Enter your Lastname: </mat-label>
+            <input matInput placeholder="example" [formControl]="last_name" required>
+            <mat-error *ngIf="last_name.invalid">{{getErrorMessage()}}</mat-error>
+          </mat-form-field>
+          <div>
+            <button type="button" mat-button matStepperNext>Next</button>
+          </div>
+        </mat-step>
 
+        <mat-step formGroupName="secondFormGroup" [stepControl]="secondFormGroup">
+          <ng-template matStepLabel>Email/Password Field</ng-template>
+          <mat-form-field appearance="fill" class="input">
+          <mat-label>Enter your username</mat-label>
+          <input matInput placeholder="admin123" [formControl]="username" required autocomplete="false">
+          <mat-error *ngIf="username.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field><br>
+
+        <mat-form-field appearance="fill" class="input">
+          <mat-label>Enter your email</mat-label>
+          <input matInput placeholder="admin@example.com" [formControl]="email" required>
+          <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+       
+        <mat-form-field appearance="fill" class="input">
+          <mat-label>Enter your password</mat-label>
+          <input matInput placeholder="admin@123" [type]="hide ? 'password' : 'text'" [formControl]="password" required autocomplete="false">
+          <mat-error *ngIf="password.invalid">{{getErrorMessage()}}</mat-error>
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+        </mat-form-field>
+          <div>
+            <button type="button" mat-button matStepperPrevious>Back</button>
+            <button type="button" mat-button matStepperNext>Next</button>
+          </div> 
+        </mat-step>
+
+        <mat-step formGroupName="thirdFormGroup" [stepControl]="thirdFormGroup">
+          <ng-template matStepLabel>Sponsor</ng-template>
+          <mat-form-field appearance="fill" class="input">
+            <mat-label>Enter your Sponsor_id</mat-label>
+            <input matInput placeholder="ZS2Oez0" [formControl]="sponsor_id" required>
+            <mat-error *ngIf="sponsor_id.invalid">{{getErrorMessage()}}</mat-error>
+          </mat-form-field>
+          <div>
+            <button type="button" mat-button matStepperPrevious>Back</button>
+            <button type="button" mat-button matStepperNext>Next</button>
+          </div>
+        </mat-step>
+        <mat-step>
+          <ng-template matStepLabel>Final</ng-template>
+          You are now done. Check Before Submiting the form
+          <div>
+            <button type="button" mat-button matStepperPrevious>Back</button>
+            <button type="submit" mat-raised-button color="primary">Register</button>
+            <button mat-button (click)="stepper.reset()">Reset</button>
+          </div>
+        </mat-step>
+      </mat-vertical-stepper>
+    </form>
+    
+    <!-----------------------------------------Normal Mat Form----------------------------------->
+    <!-- <div class="example-container">
+      <form [formGroup]="registerForm" autocomplete="off">
         <mat-form-field appearance="fill" class="input">
           <mat-label>Title (required)</mat-label>
           <select matNativeControl required [formControl]="selectFormControl">
@@ -50,7 +127,7 @@
             <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
           </button>
         </mat-form-field><br>
-        
+
         <mat-form-field appearance="fill" class="input">
           <mat-label>Choose a date</mat-label>
           <input matInput [matDatepicker]="picker">
@@ -64,10 +141,10 @@
           <mat-error *ngIf="sponsor_id.invalid">{{getErrorMessage()}}</mat-error>
         </mat-form-field><br>
       </form>
-    </div>
-    <mat-card-actions>
+    </div> -->
+    <!-- <mat-card-actions>
       <button mat-raised-button color="primary" (click)="submit()">Register</button>
       <button mat-raised-button color="accent" routerLink="/login">Back</button>
-    </mat-card-actions>
+    </mat-card-actions> -->
   </mat-card>
 </div>
